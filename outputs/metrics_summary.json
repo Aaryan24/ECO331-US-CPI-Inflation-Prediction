@@ -1,0 +1,544 @@
+{
+  "elapsed_seconds": 178.96,
+  "raw_months": 585,
+  "feature_months": 567,
+  "flagship_horizon_months": 3,
+  "h3_train_months": 460,
+  "h3_test_months": 90,
+  "h3_leaderboard": [
+    {
+      "Horizon_Months": 3,
+      "Model": "Elastic Net (L1+L2)",
+      "Family": "2. Regularized Linear",
+      "RMSE": 0.7765534702397896,
+      "MAE": 0.5614016104186027,
+      "Rel_RMSE_vs_RW": 0.7732519996315594,
+      "R2": 0.8726548706558568,
+      "Directional_Acc_pct": 65.55555555555556,
+      "DM_Stat_vs_RW": -1.9021398968515468,
+      "DM_p_value": 0.06038698432120141
+    },
+    {
+      "Horizon_Months": 3,
+      "Model": "XGBoost",
+      "Family": "3. Tree Ensemble",
+      "RMSE": 0.7826362307787051,
+      "MAE": 0.5774552991449403,
+      "Rel_RMSE_vs_RW": 0.7793088996780482,
+      "R2": 0.8706520627984129,
+      "Directional_Acc_pct": 66.66666666666666,
+      "DM_Stat_vs_RW": -2.0252945160588984,
+      "DM_p_value": 0.04583296670864717
+    },
+    {
+      "Horizon_Months": 3,
+      "Model": "Forecast Combination",
+      "Family": "6. Cross-Family Ensemble",
+      "RMSE": 0.7934187836001791,
+      "MAE": 0.5919520694625183,
+      "Rel_RMSE_vs_RW": 0.7900456111214509,
+      "R2": 0.8670634006277563,
+      "Directional_Acc_pct": 64.44444444444444,
+      "DM_Stat_vs_RW": -1.903473142005445,
+      "DM_p_value": 0.06021065535092769
+    },
+    {
+      "Horizon_Months": 3,
+      "Model": "XGB + Deep Net",
+      "Family": "5. Hybrid Tree + Deep Net",
+      "RMSE": 0.8291086661588117,
+      "MAE": 0.6216223437353077,
+      "Rel_RMSE_vs_RW": 0.8255837602801386,
+      "R2": 0.854834799455441,
+      "Directional_Acc_pct": 63.33333333333333,
+      "DM_Stat_vs_RW": -2.062081754913416,
+      "DM_p_value": 0.04211573150171185
+    },
+    {
+      "Horizon_Months": 3,
+      "Model": "Ridge (L2)",
+      "Family": "2. Regularized Linear",
+      "RMSE": 0.8326336823622635,
+      "MAE": 0.6001399224047624,
+      "Rel_RMSE_vs_RW": 0.8290937900881453,
+      "R2": 0.8535978145085392,
+      "Directional_Acc_pct": 60.0,
+      "DM_Stat_vs_RW": -1.5384498819235224,
+      "DM_p_value": 0.12748653571278243
+    },
+    {
+      "Horizon_Months": 3,
+      "Model": "Random Forest",
+      "Family": "3. Tree Ensemble",
+      "RMSE": 0.8379795723571205,
+      "MAE": 0.6135434225550487,
+      "Rel_RMSE_vs_RW": 0.8344169523515979,
+      "R2": 0.8517118411660571,
+      "Directional_Acc_pct": 64.44444444444444,
+      "DM_Stat_vs_RW": -1.288568727032675,
+      "DM_p_value": 0.20088770074405576
+    },
+    {
+      "Horizon_Months": 3,
+      "Model": "MLP (Deep Net)",
+      "Family": "4. Deep Learning",
+      "RMSE": 0.8694316062713416,
+      "MAE": 0.6768873876841106,
+      "Rel_RMSE_vs_RW": 0.8657352698257845,
+      "R2": 0.8403714909960232,
+      "Directional_Acc_pct": 60.0,
+      "DM_Stat_vs_RW": -1.3135269953594826,
+      "DM_p_value": 0.1923815610228932
+    },
+    {
+      "Horizon_Months": 3,
+      "Model": "Temporal Transformer",
+      "Family": "4. Deep Learning",
+      "RMSE": 0.8882519541830647,
+      "MAE": 0.6285214761012847,
+      "Rel_RMSE_vs_RW": 0.8844756041546077,
+      "R2": 0.8333858228995544,
+      "Directional_Acc_pct": 63.33333333333333,
+      "DM_Stat_vs_RW": -1.1146713392545835,
+      "DM_p_value": 0.26799229642556127
+    },
+    {
+      "Horizon_Months": 3,
+      "Model": "LSTM (Sequence)",
+      "Family": "4. Deep Learning",
+      "RMSE": 0.9363385824090522,
+      "MAE": 0.7182289941294759,
+      "Rel_RMSE_vs_RW": 0.9323577949582913,
+      "R2": 0.8148577882924375,
+      "Directional_Acc_pct": 58.88888888888889,
+      "DM_Stat_vs_RW": -0.7159870867989021,
+      "DM_p_value": 0.4758737358144518
+    },
+    {
+      "Horizon_Months": 3,
+      "Model": "AR(p) Benchmark",
+      "Family": "1. Econometric Benchmark",
+      "RMSE": 0.9367375792986494,
+      "MAE": 0.6921518194607312,
+      "Rel_RMSE_vs_RW": 0.9327550955364892,
+      "R2": 0.8146999673777542,
+      "Directional_Acc_pct": 57.77777777777777,
+      "DM_Stat_vs_RW": -1.077673285421613,
+      "DM_p_value": 0.28409190866440337
+    },
+    {
+      "Horizon_Months": 3,
+      "Model": "OLS Phillips Curve",
+      "Family": "1. Econometric Benchmark",
+      "RMSE": 1.0029859587553678,
+      "MAE": 0.7475247961054401,
+      "Rel_RMSE_vs_RW": 0.9987218239723812,
+      "R2": 0.7875634129143217,
+      "Directional_Acc_pct": 54.44444444444444,
+      "DM_Stat_vs_RW": -0.01742121071514608,
+      "DM_p_value": 0.9861395835834901
+    },
+    {
+      "Horizon_Months": 3,
+      "Model": "Random Walk",
+      "Family": "1. Econometric Benchmark",
+      "RMSE": 1.0042695920732223,
+      "MAE": 0.7424183379558167,
+      "Rel_RMSE_vs_RW": 1.0,
+      "R2": 0.7870193072364398,
+      "Directional_Acc_pct": 0.0,
+      "DM_Stat_vs_RW": 0.0,
+      "DM_p_value": 1.0
+    }
+  ],
+  "top_consensus_features": [
+    {
+      "Feature_Code": "base_3m_ann",
+      "Feature_Label": "Base-Effect CPI (t-12..t-9, %)",
+      "ElasticNet_Signed_Coef": -0.70158042257176,
+      "ElasticNet_Abs_Coef": 0.70158042257176,
+      "XGBoost_Mean_Abs_SHAP_pp": 0.36435755813080406,
+      "DeepMLP_Attribution_pp": 0.27184823155403137,
+      "ElasticNet_Share_pct": 47.95929660039482,
+      "XGBoost_Share_pct": 41.93064595831593,
+      "DeepMLP_Share_pct": 15.162028312683105,
+      "Consensus_Rank_Score": 35.01732362379795
+    },
+    {
+      "Feature_Code": "ppi_yoy",
+      "Feature_Label": "PPI Producer Inflation YoY (%)",
+      "ElasticNet_Signed_Coef": 0.08575656512994383,
+      "ElasticNet_Abs_Coef": 0.08575656512994383,
+      "XGBoost_Mean_Abs_SHAP_pp": 0.04637075686542731,
+      "DeepMLP_Attribution_pp": 0.2304079234600067,
+      "ElasticNet_Share_pct": 5.86222820674187,
+      "XGBoost_Share_pct": 5.33639482852544,
+      "DeepMLP_Share_pct": 12.85074234008789,
+      "Consensus_Rank_Score": 8.0164551251184
+    },
+    {
+      "Feature_Code": "m2_yoy",
+      "Feature_Label": "M2 Money Growth YoY (%)",
+      "ElasticNet_Signed_Coef": 0.10490826038621408,
+      "ElasticNet_Abs_Coef": 0.10490826038621408,
+      "XGBoost_Mean_Abs_SHAP_pp": 0.024320797476684676,
+      "DeepMLP_Attribution_pp": 0.1484616994857788,
+      "ElasticNet_Share_pct": 7.171417864327978,
+      "XGBoost_Share_pct": 2.798862616300293,
+      "DeepMLP_Share_pct": 8.280282974243164,
+      "Consensus_Rank_Score": 6.083521151623812
+    },
+    {
+      "Feature_Code": "core_headline_gap",
+      "Feature_Label": "Core - Headline Gap (pp)",
+      "ElasticNet_Signed_Coef": 0.14422891883422617,
+      "ElasticNet_Abs_Coef": 0.14422891883422617,
+      "XGBoost_Mean_Abs_SHAP_pp": 0.021340486651428767,
+      "DeepMLP_Attribution_pp": 0.10045429319143295,
+      "ElasticNet_Share_pct": 9.859336541018457,
+      "XGBoost_Share_pct": 2.455885353249587,
+      "DeepMLP_Share_pct": 5.602724552154541,
+      "Consensus_Rank_Score": 5.972648815474194
+    },
+    {
+      "Feature_Code": "elec_yoy",
+      "Feature_Label": "Electricity CPI YoY (%)",
+      "ElasticNet_Signed_Coef": -0.0,
+      "ElasticNet_Abs_Coef": 0.0,
+      "XGBoost_Mean_Abs_SHAP_pp": 0.10097036828390427,
+      "DeepMLP_Attribution_pp": 0.06470751762390137,
+      "ElasticNet_Share_pct": 0.0,
+      "XGBoost_Share_pct": 11.619774779787187,
+      "DeepMLP_Share_pct": 3.6089885234832764,
+      "Consensus_Rank_Score": 5.076254434423488
+    },
+    {
+      "Feature_Code": "cpi_yoy_lag6",
+      "Feature_Label": "Headline CPI YoY (t-6)",
+      "ElasticNet_Signed_Coef": 0.113174108493448,
+      "ElasticNet_Abs_Coef": 0.113174108493448,
+      "XGBoost_Mean_Abs_SHAP_pp": 0.014875939601915888,
+      "DeepMLP_Attribution_pp": 0.07061660289764404,
+      "ElasticNet_Share_pct": 7.736462509638184,
+      "XGBoost_Share_pct": 1.7119385692043136,
+      "DeepMLP_Share_pct": 3.938561201095581,
+      "Consensus_Rank_Score": 4.4623207599793595
+    },
+    {
+      "Feature_Code": "real_fedfunds",
+      "Feature_Label": "Real Fed Funds Rate (pp)",
+      "ElasticNet_Signed_Coef": 0.0,
+      "ElasticNet_Abs_Coef": 0.0,
+      "XGBoost_Mean_Abs_SHAP_pp": 0.06040997785748914,
+      "DeepMLP_Attribution_pp": 0.09224405884742737,
+      "ElasticNet_Share_pct": 0.0,
+      "XGBoost_Share_pct": 6.95204295167311,
+      "DeepMLP_Share_pct": 5.144808292388916,
+      "Consensus_Rank_Score": 4.032283748020675
+    },
+    {
+      "Feature_Code": "oil_yoy",
+      "Feature_Label": "WTI Crude Oil YoY (%)",
+      "ElasticNet_Signed_Coef": 0.05889679269680432,
+      "ElasticNet_Abs_Coef": 0.05889679269680432,
+      "XGBoost_Mean_Abs_SHAP_pp": 0.01697241421142179,
+      "DeepMLP_Attribution_pp": 0.09384076297283173,
+      "ElasticNet_Share_pct": 4.026122535466119,
+      "XGBoost_Share_pct": 1.9532030432082599,
+      "DeepMLP_Share_pct": 5.233862400054932,
+      "Consensus_Rank_Score": 3.7377293262431035
+    }
+  ],
+  "episode_surge": {
+    "title": "Inflation Surge Episode",
+    "origin_date": "2021-01",
+    "target_date": "2021-04",
+    "anchor_cpi": 1.3738437137002402,
+    "base_delta": -0.07450468093156815,
+    "pred_cpi": 2.7170966109628134,
+    "actual_cpi": 4.133077115360573
+  },
+  "episode_disinflation": {
+    "title": "Disinflation Turning-Point Episode",
+    "origin_date": "2022-12",
+    "target_date": "2023-03",
+    "anchor_cpi": 6.404600402357152,
+    "base_delta": -0.04261993244290352,
+    "pred_cpi": 4.7723881211300405,
+    "actual_cpi": 4.917719362889961
+  },
+  "policy_shock_windows_h3": [
+    {
+      "Event_Window": "1. COVID Lockdown (2020 H1)",
+      "Macro_Context": "Exogenous Shock",
+      "Months": 6,
+      "RandomWalk_PureLag_RMSE": 1.409,
+      "ElasticNet_RMSE": 1.28,
+      "XGBoost_RMSE": 1.292,
+      "XGB_DeepNet_RMSE": 1.144,
+      "Best_ML_vs_PureLag_pct": -18.8
+    },
+    {
+      "Event_Window": "2. Reopening Surge (2021)",
+      "Macro_Context": "Base Roll-Off + Stimulus",
+      "Months": 12,
+      "RandomWalk_PureLag_RMSE": 1.728,
+      "ElasticNet_RMSE": 1.307,
+      "XGBoost_RMSE": 1.243,
+      "XGB_DeepNet_RMSE": 1.377,
+      "Best_ML_vs_PureLag_pct": -28.1
+    },
+    {
+      "Event_Window": "3. Ukraine Energy Shock (2022 H1)",
+      "Macro_Context": "Geopolitical War Surprise",
+      "Months": 6,
+      "RandomWalk_PureLag_RMSE": 0.98,
+      "ElasticNet_RMSE": 1.361,
+      "XGBoost_RMSE": 1.387,
+      "XGB_DeepNet_RMSE": 1.209,
+      "Best_ML_vs_PureLag_pct": 23.4
+    },
+    {
+      "Event_Window": "4. Fed 75bp Hikes & Disinflation (22H2\u201323)",
+      "Macro_Context": "Monetary Tightening Turn",
+      "Months": 18,
+      "RandomWalk_PureLag_RMSE": 1.148,
+      "ElasticNet_RMSE": 0.402,
+      "XGBoost_RMSE": 0.535,
+      "XGB_DeepNet_RMSE": 0.821,
+      "Best_ML_vs_PureLag_pct": -65.0
+    },
+    {
+      "Event_Window": "5. Soft Landing & Rate Pivot (2024\u201326)",
+      "Macro_Context": "Policy Normalization",
+      "Months": 33,
+      "RandomWalk_PureLag_RMSE": 0.562,
+      "ElasticNet_RMSE": 0.486,
+      "XGBoost_RMSE": 0.503,
+      "XGB_DeepNet_RMSE": 0.51,
+      "Best_ML_vs_PureLag_pct": -13.5
+    }
+  ],
+  "cross_paper_channel_ablation": [
+    {
+      "Feature_Set": "1. Core Macro Baseline (12 FRED Series)",
+      "Course_Literature_Link": "CPI & NKPC Core (Singh & Bhoi 2022)",
+      "Num_FRED_Series": 12,
+      "ElasticNet_h3_RMSE": 0.825,
+      "XGBoost_h3_RMSE": 0.759,
+      "Mean_ML_h3_RMSE": 0.792,
+      "ElasticNet_Gain_vs_Core_pct": 0.0
+    },
+    {
+      "Feature_Set": "2. + Electricity Price Index (CUSR0000SEHF01)",
+      "Course_Literature_Link": "Sticky Grid Utility Cost (Kuskaya & Bilgili 2025)",
+      "Num_FRED_Series": 13,
+      "ElasticNet_h3_RMSE": 0.825,
+      "XGBoost_h3_RMSE": 0.783,
+      "Mean_ML_h3_RMSE": 0.804,
+      "ElasticNet_Gain_vs_Core_pct": -0.0
+    },
+    {
+      "Feature_Set": "3. + US Stock Market Index (SPASTT01USM661N)",
+      "Course_Literature_Link": "Financial Wealth Effect (Subasi 2021; Vamossy 2024)",
+      "Num_FRED_Series": 13,
+      "ElasticNet_h3_RMSE": 0.808,
+      "XGBoost_h3_RMSE": 0.775,
+      "Mean_ML_h3_RMSE": 0.791,
+      "ElasticNet_Gain_vs_Core_pct": -2.0
+    },
+    {
+      "Feature_Set": "4. + Real GDP Growth (GDPC1, Lagged 1Q)",
+      "Course_Literature_Link": "Broad Service+Goods Demand (Yoon 2021)",
+      "Num_FRED_Series": 13,
+      "ElasticNet_h3_RMSE": 0.796,
+      "XGBoost_h3_RMSE": 0.785,
+      "Mean_ML_h3_RMSE": 0.791,
+      "ElasticNet_Gain_vs_Core_pct": -3.4
+    },
+    {
+      "Feature_Set": "5. Unified 4-Cluster Synthesis (All 15 Series)",
+      "Course_Literature_Link": "Full Course Literature Integration",
+      "Num_FRED_Series": 15,
+      "ElasticNet_h3_RMSE": 0.777,
+      "XGBoost_h3_RMSE": 0.77,
+      "Mean_ML_h3_RMSE": 0.773,
+      "ElasticNet_Gain_vs_Core_pct": -5.8
+    }
+  ],
+  "horizon_channel_shap_shares": [
+    {
+      "Horizon_Months": 1,
+      "1. Base Effect & Price Inertia": 46.92,
+      "2. Monetary, M2 & Equities": 12.3,
+      "3. Supply, Electricity & Oil": 28.56,
+      "4. Real GDP, Output & Slack": 10.56,
+      "5. Inflation Expectations (Mich.)": 1.66
+    },
+    {
+      "Horizon_Months": 3,
+      "1. Base Effect & Price Inertia": 55.21,
+      "2. Monetary, M2 & Equities": 14.05,
+      "3. Supply, Electricity & Oil": 18.91,
+      "4. Real GDP, Output & Slack": 9.85,
+      "5. Inflation Expectations (Mich.)": 1.98
+    },
+    {
+      "Horizon_Months": 6,
+      "1. Base Effect & Price Inertia": 36.79,
+      "2. Monetary, M2 & Equities": 24.61,
+      "3. Supply, Electricity & Oil": 17.92,
+      "4. Real GDP, Output & Slack": 17.3,
+      "5. Inflation Expectations (Mich.)": 3.39
+    },
+    {
+      "Horizon_Months": 12,
+      "1. Base Effect & Price Inertia": 39.36,
+      "2. Monetary, M2 & Equities": 15.66,
+      "3. Supply, Electricity & Oil": 10.41,
+      "4. Real GDP, Output & Slack": 17.85,
+      "5. Inflation Expectations (Mich.)": 16.72
+    }
+  ],
+  "xai_policy_playbook": [
+    {
+      "Feature": "Base-Effect CPI (t-12..t-9, %)",
+      "Consensus_Share_pct": 35.0,
+      "XGB_SHAP_Share_pct": 41.9,
+      "ElasticNet_Share_pct": 48.0,
+      "DeepMLP_Share_pct": 15.2,
+      "Economic_Mechanism": "Mechanical Downward Roll-Off (-)",
+      "How_Policymakers_and_Analysts_Use_It": "Compute t-12..t-9 spike first before judging new CPI prints; separates calendar math from fresh inflation."
+    },
+    {
+      "Feature": "PPI Producer Inflation YoY (%)",
+      "Consensus_Share_pct": 8.0,
+      "XGB_SHAP_Share_pct": 5.3,
+      "ElasticNet_Share_pct": 5.9,
+      "DeepMLP_Share_pct": 12.9,
+      "Economic_Mechanism": "Upstream Cost Push (+)",
+      "How_Policymakers_and_Analysts_Use_It": "Leading 1\u20133m retail pipeline warning: PPI > +5% YoY signals wholesale margin pass-through into goods CPI."
+    },
+    {
+      "Feature": "M2 Money Growth YoY (%)",
+      "Consensus_Share_pct": 6.1,
+      "XGB_SHAP_Share_pct": 2.8,
+      "ElasticNet_Share_pct": 7.2,
+      "DeepMLP_Share_pct": 8.3,
+      "Economic_Mechanism": "Liquidity Fuel (+)",
+      "How_Policymakers_and_Analysts_Use_It": "Medium-term monetary overhang gauge: double-digit M2 growth (>10%) sustains broad demand inflation across 3\u201312m."
+    },
+    {
+      "Feature": "Core - Headline Gap (pp)",
+      "Consensus_Share_pct": 6.0,
+      "XGB_SHAP_Share_pct": 2.5,
+      "ElasticNet_Share_pct": 9.9,
+      "DeepMLP_Share_pct": 5.6,
+      "Economic_Mechanism": "Mean-Reversion Anchor (+ toward Core)",
+      "How_Policymakers_and_Analysts_Use_It": "When Headline > Core (gap < -1.5 pp from oil/food spikes), fade transient headline extremes toward Core trend."
+    },
+    {
+      "Feature": "Electricity CPI YoY (%)",
+      "Consensus_Share_pct": 5.1,
+      "XGB_SHAP_Share_pct": 11.6,
+      "ElasticNet_Share_pct": 0.0,
+      "DeepMLP_Share_pct": 3.6,
+      "Economic_Mechanism": "Sticky Utility Cost Push (+)",
+      "How_Policymakers_and_Analysts_Use_It": "Regulated grid electricity tariffs stay sticky long after crude oil falls, sustaining 3\u20136m service & retail CPI."
+    },
+    {
+      "Feature": "Real Fed Funds Rate (pp)",
+      "Consensus_Share_pct": 4.0,
+      "XGB_SHAP_Share_pct": 7.0,
+      "ElasticNet_Share_pct": 0.0,
+      "DeepMLP_Share_pct": 5.1,
+      "Economic_Mechanism": "Nonlinear Policy Brake (- above threshold)",
+      "How_Policymakers_and_Analysts_Use_It": "True monetary stance (Fed Rate - CPI): deeply negative (< -2%) fuels inflation; >= 0% to +2% triggers disinflation."
+    },
+    {
+      "Feature": "WTI Crude Oil YoY (%)",
+      "Consensus_Share_pct": 3.7,
+      "XGB_SHAP_Share_pct": 2.0,
+      "ElasticNet_Share_pct": 4.0,
+      "DeepMLP_Share_pct": 5.2,
+      "Economic_Mechanism": "Immediate Energy Shock (+)",
+      "How_Policymakers_and_Analysts_Use_It": "Strongest at 1m nowcast horizon; watch second-round spillover into Core & Michigan expectations."
+    },
+    {
+      "Feature": "CPI 1m Momentum (Ann. %)",
+      "Consensus_Share_pct": 2.9,
+      "XGB_SHAP_Share_pct": 1.0,
+      "ElasticNet_Share_pct": 5.8,
+      "DeepMLP_Share_pct": 2.1,
+      "Economic_Mechanism": "High-Frequency Speedometer (+)",
+      "How_Policymakers_and_Analysts_Use_It": "Annualized 1m pace catches sudden inflection points 2\u20133 months before 12-month YoY headline turns."
+    },
+    {
+      "Feature": "1Y Inflation Expect. (Mich. %)",
+      "Consensus_Share_pct": 2.9,
+      "XGB_SHAP_Share_pct": 1.7,
+      "ElasticNet_Share_pct": 3.0,
+      "DeepMLP_Share_pct": 3.9,
+      "Economic_Mechanism": "12m Wage-Price Anchor (+)",
+      "How_Policymakers_and_Analysts_Use_It": "Surges nearly 6x to 17.8% SHAP share at 12m: rising above 4.0% signals un-anchoring risk requiring hawkish policy."
+    },
+    {
+      "Feature": "US Stock Market YoY (%)",
+      "Consensus_Share_pct": 2.5,
+      "XGB_SHAP_Share_pct": 2.0,
+      "ElasticNet_Share_pct": 3.3,
+      "DeepMLP_Share_pct": 2.2,
+      "Economic_Mechanism": "Financial Conditions & Wealth (+)",
+      "How_Policymakers_and_Analysts_Use_It": "Equity market rallies/drawdowns front-run household wealth effects and corporate pricing confidence."
+    },
+    {
+      "Feature": "Industrial Prod. YoY (%)",
+      "Consensus_Share_pct": 2.3,
+      "XGB_SHAP_Share_pct": 4.4,
+      "ElasticNet_Share_pct": 0.2,
+      "DeepMLP_Share_pct": 2.2,
+      "Economic_Mechanism": "Real Output / Cyclical Heat (+)",
+      "How_Policymakers_and_Analysts_Use_It": "Contracting factory output (< 0% YoY) reinforces disinflationary pull alongside restrictive real rates."
+    },
+    {
+      "Feature": "Consumer Sentiment 12m Chg",
+      "Consensus_Share_pct": 1.5,
+      "XGB_SHAP_Share_pct": 2.2,
+      "ElasticNet_Share_pct": 0.0,
+      "DeepMLP_Share_pct": 2.4,
+      "Economic_Mechanism": "Household Demand Cooling (+)",
+      "How_Policymakers_and_Analysts_Use_It": "Sharp drops (< -10 pts YoY) signal consumer spending pullback and easing service-sector pricing power."
+    },
+    {
+      "Feature": "Real GDP Growth YoY (%, Lag 1Q)",
+      "Consensus_Share_pct": 1.0,
+      "XGB_SHAP_Share_pct": 0.4,
+      "ElasticNet_Share_pct": 0.0,
+      "DeepMLP_Share_pct": 2.5,
+      "Economic_Mechanism": "Broad Service + Goods Demand (+)",
+      "How_Policymakers_and_Analysts_Use_It": "Captures the 80% service-sector economy missing from factory-only INDPRO (especially helpful for linear Elastic Net)."
+    }
+  ],
+  "cv_leakage_audit": [
+    {
+      "Model": "Elastic Net (L1+L2)",
+      "Random_KFold_RMSE_Leaky": 0.558,
+      "Chronological_Purged_TSCV_RMSE": 0.625,
+      "Artificial_Optimism_Bias_pct": 10.7
+    },
+    {
+      "Model": "Random Forest",
+      "Random_KFold_RMSE_Leaky": 0.52,
+      "Chronological_Purged_TSCV_RMSE": 0.723,
+      "Artificial_Optimism_Bias_pct": 28.1
+    },
+    {
+      "Model": "XGBoost",
+      "Random_KFold_RMSE_Leaky": 0.456,
+      "Chronological_Purged_TSCV_RMSE": 0.857,
+      "Artificial_Optimism_Bias_pct": 46.8
+    }
+  ],
+  "presentation_pptx": "/Users/aaryan/Documents/eco331_gemini/presentation/ECO331_Inflation_Forecasting_Presentation.pptx",
+  "interactive_html": "/Users/aaryan/Documents/eco331_gemini/outputs/interactive_report.html"
+}

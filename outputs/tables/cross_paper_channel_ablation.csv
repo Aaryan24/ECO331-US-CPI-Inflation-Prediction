@@ -1,0 +1,11 @@
+Plot_Label,Feature_Set,Course_Literature_Link,Num_FRED_Series,ElasticNet_h3_RMSE,XGBoost_h3_RMSE,Mean_ML_h3_RMSE,ElasticNet_Gain_vs_Core_pct
+"1. Core Macro
+(12 Series)",1. Core Macro Baseline (12 FRED Series),CPI & NKPC Core (Singh & Bhoi 2022),12,0.825,0.759,0.792,0.0
+"2. + Electricity
+(Kuskaya '25)",2. + Electricity Price Index (CUSR0000SEHF01),Sticky Grid Utility Cost (Kuskaya & Bilgili 2025),13,0.825,0.783,0.804,-0.0
+"3. + Equities
+(Vamossy '24)",3. + US Stock Market Index (SPASTT01USM661N),Financial Wealth Effect (Subasi 2021; Vamossy 2024),13,0.808,0.775,0.791,-2.0
+"4. + Real GDP
+(Yoon '21)","4. + Real GDP Growth (GDPC1, Lagged 1Q)",Broad Service+Goods Demand (Yoon 2021),13,0.796,0.785,0.791,-3.4
+"5. Unified
+(All 15 Series)",5. Unified 4-Cluster Synthesis (All 15 Series),Full Course Literature Integration,15,0.777,0.77,0.773,-5.8

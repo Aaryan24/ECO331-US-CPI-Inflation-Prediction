@@ -1,0 +1,4 @@
+Model,Random_KFold_RMSE_Leaky,Chronological_Purged_TSCV_RMSE,Artificial_Optimism_Bias_pct
+Elastic Net (L1+L2),0.558,0.625,10.7
+Random Forest,0.52,0.723,28.1
+XGBoost,0.456,0.857,46.8

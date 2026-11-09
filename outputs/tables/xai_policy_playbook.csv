@@ -1,0 +1,14 @@
+Feature,Consensus_Share_pct,XGB_SHAP_Share_pct,ElasticNet_Share_pct,XGB_MLP_Share_pct,Economic_Mechanism,How_Policymakers_and_Analysts_Use_It
+"Base-Effect CPI (t-12..t-9, %)",40.1,41.9,48.0,30.5,Mechanical Downward Roll-Off (-),Compute t-12..t-9 spike first before judging new CPI prints; separates calendar math from fresh inflation.
+Electricity CPI YoY (%),8.1,11.6,0.0,12.7,Sticky Utility Cost Push (+),"Regulated grid electricity tariffs stay sticky long after crude oil falls, sustaining 3–6m service & retail CPI."
+PPI Producer Inflation YoY (%),5.2,5.3,5.9,4.5,Upstream Cost Push (+),Leading 1–3m retail pipeline warning: PPI > +5% YoY signals wholesale margin pass-through into goods CPI.
+Real Fed Funds Rate (pp),5.1,7.0,0.0,8.2,Nonlinear Policy Brake (- above threshold),True monetary stance (Fed Rate - CPI): deeply negative (< -2%) fuels inflation; >= 0% to +2% triggers disinflation.
+Core - Headline Gap (pp),4.5,2.5,9.9,1.1,Mean-Reversion Anchor (+ toward Core),"When Headline > Core (gap < -1.5 pp from oil/food spikes), fade transient headline extremes toward Core trend."
+M2 Money Growth YoY (%),4.4,2.8,7.2,3.3,Liquidity Fuel (+),Medium-term monetary overhang gauge: double-digit M2 growth (>10%) sustains broad demand inflation across 3–12m.
+US Stock Market YoY (%),3.4,2.0,3.3,4.8,Financial Conditions & Wealth (+),Equity market rallies/drawdowns front-run household wealth effects and corporate pricing confidence.
+Industrial Prod. YoY (%),2.9,4.4,0.2,4.0,Real Output / Cyclical Heat (+),Contracting factory output (< 0% YoY) reinforces disinflationary pull alongside restrictive real rates.
+CPI 1m Momentum (Ann. %),2.4,1.0,5.8,0.5,High-Frequency Speedometer (+),Annualized 1m pace catches sudden inflection points 2–3 months before 12-month YoY headline turns.
+WTI Crude Oil YoY (%),2.3,2.0,4.0,1.0,Immediate Energy Shock (+),Strongest at 1m nowcast horizon; watch second-round spillover into Core & Michigan expectations.
+1Y Inflation Expect. (Mich. %),1.9,1.7,3.0,0.8,12m Wage-Price Anchor (+),Surges nearly 6x to 17.8% SHAP share at 12m: rising above 4.0% signals un-anchoring risk requiring hawkish policy.
+Consumer Sentiment 12m Chg,1.7,2.2,0.0,2.9,Household Demand Cooling (+),Sharp drops (< -10 pts YoY) signal consumer spending pullback and easing service-sector pricing power.
+"Real GDP Growth YoY (%, Lag 1Q)",0.2,0.4,0.0,0.2,Broad Service + Goods Demand (+),Captures the 80% service-sector economy missing from factory-only INDPRO (especially helpful for linear Elastic Net).

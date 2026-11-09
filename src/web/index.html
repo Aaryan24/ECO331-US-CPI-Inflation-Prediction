@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>US CPI Inflation Predictor — Multi-Model Live Demo (ECO331)</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="top-banner">
+    <div class="banner-inner">
+      <div class="brand-block">
+        <span class="eyebrow">ECO331 (2026) • Interactive Multi-Model Demo</span>
+        <h1>Explainable US Inflation Predictor</h1>
+        <p>Adjust key macroeconomic levers or click a historical regime to compare <strong>12 live models</strong> (Econometric, Linear, XGBoost, LSTM, Transformer &amp; Hybrid Deep Net) with live <strong>TreeSHAP</strong> explanations.</p>
+      </div>
+      <div class="preset-bar" aria-label="Historical Macroeconomic Presets">
+        <span class="preset-bar-label">Quick Historical Scenarios:</span>
+        <div id="preset-buttons" class="preset-pills"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="workspace-grid">
+    <!-- LEFT SIDEBAR: SIMPLE MACRO CONTROLS -->
+    <aside class="controls-panel">
+      <form id="predictor-form" action="/api/predict" method="POST">
+        <div class="panel-header-row">
+          <h2>Macroeconomic Inputs</h2>
+          <button type="button" id="reset-btn" class="secondary-btn">Reset Preset</button>
+        </div>
+        <p id="active-preset-desc" class="preset-caption">Loading latest FRED macroeconomic snapshot…</p>
+
+        <fieldset class="horizon-fieldset">
+          <legend>Forecast Horizon Ahead</legend>
+          <div id="horizon-options" class="horizon-radios"></div>
+        </fieldset>
+
+        <div id="main-slider-groups"></div>
+
+        <details class="advanced-drawer">
+          <summary>Fine-Tune 3 Secondary Signals (Optional)</summary>
+          <fieldset class="slider-fieldset advanced-fieldset">
+            <legend class="visually-hidden">Secondary Macroeconomic Signals</legend>
+            <div id="advanced-sliders"></div>
+          </fieldset>
+        </details>
+
+        <div class="submit-row">
+          <button type="submit" id="run-btn" class="primary-btn">Update All 12 Model Predictions</button>
+        </div>
+      </form>
+    </aside>
+
+    <!-- RIGHT MAIN PANEL: LIVE PREDICTIONS, VISUAL COMPARISON & SHAP -->
+    <section class="results-panel" aria-live="polite">
+      <!-- Top Hero KPI Summary Cards -->
+      <div class="kpi-grid">
+        <article class="kpi-card highlight-kpi">
+          <span class="kpi-tag" id="best-model-badge">Best Model for Horizon</span>
+          <div class="kpi-main-row">
+            <strong class="kpi-value" id="kpi-best-cpi">--%</strong>
+            <span class="kpi-delta" id="kpi-best-delta">-- pp</span>
+          </div>
+          <p class="kpi-sub" id="kpi-best-name">Loading model…</p>
+        </article>
+
+        <article class="kpi-card">
+          <span class="kpi-tag">All-Model Consensus Mean</span>
+          <div class="kpi-main-row">
+            <strong class="kpi-value" id="kpi-consensus-cpi">--%</strong>
+            <span class="kpi-delta" id="kpi-consensus-delta">-- pp</span>
+          </div>
+          <p class="kpi-sub" id="kpi-consensus-range">Range across models: --</p>
+        </article>
+
+        <article class="kpi-card">
+          <span class="kpi-tag" id="kpi-ref-title">Today's Anchor CPI (Pure Lag)</span>
+          <div class="kpi-main-row">
+            <strong class="kpi-value" id="kpi-anchor-cpi">--%</strong>
+            <span class="kpi-badge-actual" id="kpi-actual-badge" hidden>Actual: --%</span>
+          </div>
+          <p class="kpi-sub" id="kpi-ref-sub">Random Walk predicts 0.00 pp change</p>
+        </article>
+      </div>
+
+      <!-- Visual 12-Model Forecast Comparison -->
+      <section class="card">
+        <div class="card-head">
+          <div>
+            <h2>All 12 Models Compared Side-by-Side</h2>
+            <p class="card-subtitle">Sorted by verified out-of-sample accuracy (2019–2026) at the selected horizon. Vertical dashed line marks today's current CPI.</p>
+          </div>
+          <div class="family-legend" aria-label="Model Family Color Key">
+            <span class="leg-dot fam-1">Econometric</span>
+            <span class="leg-dot fam-2">Linear</span>
+            <span class="leg-dot fam-3">Trees</span>
+            <span class="leg-dot fam-4">Deep Net</span>
+            <span class="leg-dot fam-5">XGB + Deep Net</span>
+            <span class="leg-dot fam-6">Ensemble</span>
+          </div>
+        </div>
+        <div id="model-bars-chart" class="bars-chart" role="img" aria-label="Bar chart comparing predicted CPI inflation across all 12 models"></div>
+      </section>
+
+      <!-- Live Explainable AI (Exact XGBoost TreeSHAP) -->
+      <section class="card">
+        <div class="card-head">
+          <div>
+            <h2>Why Did Inflation Move? (Live Exact TreeSHAP Breakdown)</h2>
+            <p class="card-subtitle" id="shap-equation-sub">Decomposing XGBoost's predicted shift from today's CPI in exact percentage points (pp):</p>
+          </div>
+        </div>
+        <div id="shap-bars-chart" class="shap-chart"></div>
+      </section>
+
+      <!-- Accessible Responsive Comparison Table -->
+      <section class="card">
+        <div tabindex="0" role="region" aria-labelledby="model-table-caption" class="table-wrapper">
+          <table class="model-table">
+            <caption id="model-table-caption">Detailed Multi-Model Forecast &amp; Out-of-Sample Accuracy Table</caption>
+            <thead>
+              <tr>
+                <th scope="col">Model Architecture</th>
+                <th scope="col">Methodological Family</th>
+                <th scope="col">Predicted CPI</th>
+                <th scope="col">Predicted Shift (Δ)</th>
+                <th scope="col">2019–26 Test RMSE</th>
+              </tr>
+            </thead>
+            <tbody id="model-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

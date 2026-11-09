@@ -1,0 +1,16 @@
+FRED_ID,Variable_Name,Economic_Channel,Units,Raw_Mean,Raw_Std,Raw_ADF_Stat,Raw_ADF_p,Raw_Stationary_5pct,Model_Transformation,Transformed_ADF_Stat,Transformed_ADF_p,Transformed_Stationary_5pct
+CPIAUCSL,Headline CPI (All Urban Consumers),Target / Price Inertia,"Index (1982-84=100, SA)",184.43,68.32,1.57,0.9978,No (Unit Root),YoY % Change & 3m Annualized %,-4.75,0.0001,Yes
+CPILFESL,Core CPI (Less Food & Energy),Underlying Trend Inflation,"Index (1982-84=100, SA)",189.27,69.17,1.23,0.9962,No (Unit Root),YoY % Change & Core-Headline Spread,-4.53,0.0002,Yes
+MICH,Univ. of Michigan 1Y Inflation Expectations,Expectations Channel (NKPC),Percent (%),3.62,1.61,-4.79,0.0001,Yes,Level (%) & 3m Change,-5.95,0.0,Yes
+UNRATE,Civilian Unemployment Rate,Phillips Curve / Labor Slack,"Percent (%, SA)",5.99,1.77,-2.77,0.063,No (Unit Root),Level (%) & 12m Change (Sahm-style),-4.88,0.0,Yes
+INDPRO,Industrial Production Index,Real Activity / Output Growth,"Index (2017=100, SA)",81.56,19.47,-1.08,0.723,No (Unit Root),YoY % Growth,-4.3,0.0005,Yes
+PPIACO,Producer Price Index (All Commodities),Upstream Cost-Push Supply Shock,"Index (1982=100, NSA)",155.12,53.08,1.25,0.9963,No (Unit Root),YoY % Change,-5.91,0.0,Yes
+WTISPLC,Spot Crude Oil Price (WTI),Energy / Commodity Shock,USD per Barrel,45.55,28.17,-2.1,0.2453,No (Unit Root),YoY % Change,-5.45,0.0,Yes
+FEDFUNDS,Effective Federal Funds Rate,Monetary Policy Stance,Percent (%),4.62,3.96,-2.6,0.0926,No (Unit Root),"Level (%), Real Policy Rate, 12m Change",-5.88,0.0,Yes
+GS10,10-Year Treasury Constant Maturity Rate,Long-Term Bond Market Yields,Percent (%),5.75,3.27,-1.47,0.5473,No (Unit Root),10Y-2Y Term Spread (%),-4.28,0.0005,Yes
+GS2,2-Year Treasury Constant Maturity Rate,Near-Term Policy Path Expectations,Percent (%),4.91,3.7,-1.84,0.3624,No (Unit Root),10Y-2Y Term Spread (%),-4.28,0.0005,Yes
+M2SL,M2 Broad Money Stock,Monetarist / Liquidity Channel,Billions of USD (SA),7922.17,6340.03,2.4,0.999,No (Unit Root),YoY % Growth,-4.68,0.0001,Yes
+UMCSENT,Univ. of Michigan Consumer Sentiment,Household Demand Confidence,Index (1966:Q1=100),83.64,14.18,-1.7,0.4288,No (Unit Root),12m Change & Normalized Level,-5.0,0.0,Yes
+CUSR0000SEHF01,CPI: Electricity Price Index,Sticky Grid Energy Pass-Through (Kuskaya 2025),"Index (1982-84=100, SA)",159.3,58.2,1.02,0.9945,No (Unit Root),YoY % Change,-3.68,0.0043,Yes
+SPASTT01USM661N,US Total Equity / Stock Price Index,Financial Conditions & Wealth (Vamossy 2024),"Index (2015=100, OECD)",64.82,51.95,2.29,0.9989,No (Unit Root),YoY % Return,-5.0,0.0,Yes
+GDPC1,Real Gross Domestic Product,Aggregate Output Growth (Yoon 2021),Billions of Chained 2017 USD (Quarterly),14482.63,5084.53,1.86,0.9985,No (Unit Root),YoY % Growth (1Q Causal Publication Lag),-4.08,0.001,Yes
